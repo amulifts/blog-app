@@ -1,0 +1,11 @@
+<div class="list-group">
+{% for comment in comments %}
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <small class="text-muted">{{ comment.created_at }}</small>
+    </div>
+    <p class="mb-1">{{ comment.comment }}</p>
+    <small class="text-muted">@{{comment.commented_by}}</small>
+  </a>
+  {% endfor %}
+</div>

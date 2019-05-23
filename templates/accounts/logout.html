@@ -1,0 +1,9 @@
+{% extends "partials/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block navbar %}
+    {% include "partials/nav.html" %}
+{% endblock navbar %}
+{% block content %}
+<p> You are logged out successfully. <a href="{% url 'login' %}">Login Again</a> </p>
+{% endblock content %}

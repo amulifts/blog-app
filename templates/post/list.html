@@ -1,0 +1,28 @@
+{% extends "partials/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Post
+{% endblock title %}
+
+{% block navbar %}
+{% include "partials/nav.html" %}
+{% endblock navbar %}
+
+{% block content %}
+{% for item in  object_list %}
+    {{item.title}}
+    {{item.body}}
+    {{item.author}}
+    {{item.created_at.year}}
+{% endfor %}
+
+{% endblock content %}
+
+{% block rightbar %}
+{% include "post/rightbar.html" %}
+{% endblock rightbar %}
+
+{% block footer %}
+{% include "partials/footer.html" %}
+{% endblock footer %}
